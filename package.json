@@ -12,10 +12,22 @@
     ],
     "activationEvents": [
         "onLanguage:cpp",
-        "onLanguage:c"
+        "onLanguage:c",
+        "onCommand:extension.uploadDir",
+        "onCommand:extension.downloadDir"
     ],
     "main": "./out/src/extension",
     "contributes": {
+        "commands": [
+            {
+                "command": "extension.uploadDir",
+                "title": "upload diretory"
+            },
+            {
+                "command": "extension.downloadDir",
+                "title": "download directory"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "sycn path conf",
